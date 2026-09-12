@@ -18,6 +18,13 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
+app.get("/datacenters", (req, res) => {
+  res.json({
+    status: "ok",
+    datacenters: []
+  });
+});
+
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`A8 server running on port ${PORT}`);
 });
